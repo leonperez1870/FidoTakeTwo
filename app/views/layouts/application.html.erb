@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FidoTakeTwo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="padding-top:70px;">
+	<div class="navbar navbar-default navbar-fixed-top" id="fidoheader">
+		<div class="container">
+			<div class="col-md-4">
+				<h1>FidoTakeTwo</h1>
+			</div>
+			<div class="col-md-8" id="fidobuttons">
+				<% if user_signed_in? %>
+                  <%= link_to "Profile", edit_user_registration_path, :class => "btn btn-large btn-primary" %>
+                <% else %>
+                  <%= link_to "Sign Up", new_user_registration_path, :class => "btn btn-large btn-primary" %>
+                <% end %>
+                <% if user_signed_in? %>
+        			<%= link_to "Sign Out", destroy_user_session_path, :class => "btn btn-large btn-primary", :method => :delete %>
+        		<% else %>
+        			<%= link_to "Log In", new_user_session_path, :class => "btn btn-large btn-primary" %>
+        		<% end %>
+			</div>
+		</div> 
+	</div>
+<%= yield %>
+
+</body>
+</html>

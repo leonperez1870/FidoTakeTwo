@@ -1,0 +1,43 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+#fidoheader {
+	background-color: #80BDD1;
+}
+
+#containfido {
+	width: 100%;
+	height: 500px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#fidoad1 {
+	text-align: center;
+	background-color: #FF6600;
+	height: 500px;
+}
+
+#fidoad2 {
+	text-align: center;
+	background-color: #FF6600;
+	height: 500px;
+}
+
+
+#fidobuttons {
+	margin-top: 19px;
+	padding-left: 580px;
+}
+
+#fidojumbo {
+	text-align: center;
+	background-color: #1C6A85;
+	color: white;
+	height: 500px;
+}
+
+#uploadfido {
+	text-align: center;
+}
